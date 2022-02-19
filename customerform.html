@@ -18,7 +18,7 @@
           connect-src 'self' https://localhost:44321
           ">
 
-    <title>Spark Plugs - Customer Form</title>
+    <title>Spark Plug - Customer Form</title>
 
 </head>
 
@@ -26,9 +26,9 @@
 
     <h3>Customer Form</h3>
 
-    <!-- This is the Spark Plugs Customer Form -->
+    <!-- This is the Spark Plug Customer Form -->
 
-    <form id="sparkPlugsFeedback" name="sparkPlugsFeedback" method="post">
+    <form id="sparkPlugFeedback" name="sparkPlugFeedback" method="post">
 
         <label for="customerName"><b>Name: </b></label> <input type="text" id="customerName" name="customerName" /> <br /><br />
 
@@ -44,7 +44,7 @@
 
     </form>
 
-    <div id="feedback"><b>Status: </b><i>None yet. An actual feedback would not be italicised and it would be in quotes e.g. "Yes!"</i></div>
+    <div id="feedback"><b>Status: </b><i>None yet. An actual feedback would not be italicised and it would be in quotes e.g. </i>"Yes!"</div>
 
     <script>
 
@@ -54,7 +54,7 @@
 
             chooseColor = "red"; // feedback color
 
-            mySparkPlugsFeedback = document.getElementById("sparkPlugsFeedback"); // the form object
+            var mySparkPlugFeedback = document.getElementById("sparkPlugFeedback"); // the form object
 
             // below are the fields that collect information from the customer
 
@@ -82,7 +82,7 @@
 
             var mySPFormName = document.getElementById("_formName"); // A hidden field to carry the form name
 
-            mySPFormName.setAttribute("value", mySparkPlugsFeedback.name); // assign the form name hidden field to the actual form object name
+            mySPFormName.setAttribute("value", mySparkPlugFeedback.name); // assign the form name hidden field to the actual form object name
 
             var message = "";
 
@@ -106,14 +106,14 @@
 
             if (message == "" && (mySPCustomerMessage.value.length < 10 || mySPCustomerMessage.value.length > 500)) {
 
-                message = "Your message must be between 100 and 500 characters in length!"; // validation to check for message size and report where it didn't fit specifications if there was no previous error
+                message = "Your message must be between 10 and 500 characters in length!"; // validation to check for message size and report where it didn't fit specifications if there was no previous error
 
             }
 
 
             if (message == "") { //start processing form when there are no errors
 
-                var formdata = new FormData(mySparkPlugsFeedback); // get data from the form
+                var formdata = new FormData(mySparkPlugFeedback); // get data from the form
 
                 var endpoint = 'https://localhost:44321'; //change this to a valid endpoint;
 
@@ -133,7 +133,7 @@
 
                             chooseColor = "green"; // color when form submission was successful
 
-                            mySparkPlugsFeedback.reset(); // clear the form when the form was submitted
+                            mySparkPlugFeedback.reset(); // clear the form when the form was submitted
 
                         } else {
 
