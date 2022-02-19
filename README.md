@@ -1,8 +1,8 @@
-# HENRY NEEDS HELP AT SPARK PLUGS WEB DESIGN AGENCY
+# HENRY NEEDS HELP AT SPARK PLUG WEB DESIGN AGENCY
 
 **The Problem**
 
-Henry works for a Spark Plugs, a web design agency and some of their customers want them to setup web forms on their websites.
+Henry works for Spark Plug, a web design agency and some of their customers want them to setup web forms on their websites.
 
 The demand for this feature has increased lately so they are trying to optimize and serve their customers in a faster way.
 
